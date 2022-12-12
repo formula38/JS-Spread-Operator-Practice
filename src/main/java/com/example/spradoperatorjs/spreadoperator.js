@@ -58,12 +58,23 @@ console.log();
 
 // Write a function called sumEveryOther that takes in any amount of arguments,
 // and returns the sum of every other argument.
-sumEveryOther(5, 6, 3, 4, 1); //9
-sumEveryOther(10, 2, 11); //21
-
+function sumEveryOther(...numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+        i++;
+    }
+    return sum;
+}
+console.log("sumEveryOther");
+console.log(sumEveryOther(5, 6, 3, 4, 1)); //9
+console.log(sumEveryOther(10, 2, 11)); //21
+console.log();
 
 // Write a function called onlyUniques that can take in any number of arguments,
 // and returns an array of only the unique arguments.
+
+
 onlyUniques('cat', 'cat', 'dog', 'pig'); //['cat', 'dog', 'pig']
 onlyUniques(1, 4, 7, 1, 2, 7, 4); //[1, 4, 7, 2]
 
