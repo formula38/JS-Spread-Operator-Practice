@@ -30,8 +30,17 @@ console.log();
 
 // Write a function called `countTheArgs` that can take any number of arguments,
 // and returns the number of arguments that are passed in.
-countTheArgs('cat', 'dog'); //2
-countTheArgs('cat', 'dog', 'frog', 'bear'); //4
+function countTheArgs(...args) {
+    let count = 0;
+    for (let arg of args) {
+        count += 1;
+    }
+    return count;
+}
+console.log("countTheArgs");
+console.log(countTheArgs('cat', 'dog')); //2
+console.log(countTheArgs('cat', 'dog', 'frog', 'bear')); //4
+console.log();
 
 // Write a function called combineTwoArrays that takes in two arrays as arguments,
 // and returns a single array that combines both (using the spread operator).
