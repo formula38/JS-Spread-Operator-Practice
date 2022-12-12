@@ -44,7 +44,17 @@ console.log();
 
 // Write a function called combineTwoArrays that takes in two arrays as arguments,
 // and returns a single array that combines both (using the spread operator).
+function combineTwoArrays(arr1, arr2) {
+    let combineArrays = [...arr1, ...arr2];
+    return combineArrays;
+}
 
+let array1 = ['cat', 'dog'];
+let array2 = ['frog', 'bear'];
+
+console.log("combineTwoArrays");
+console.log(combineTwoArrays(array1, array2));
+console.log();
 
 // Write a function called sumEveryOther that takes in any amount of arguments,
 // and returns the sum of every other argument.
