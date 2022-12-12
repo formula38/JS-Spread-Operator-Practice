@@ -15,8 +15,18 @@ console.log();
 
 // Write a function called addOnlyNums that can take in any number of arguments
 // (including numbers or strings), and returns the sum of only the numbers.
+function addOnlyNums(...arr) {
+    let sum = 0;
+    for (const num of arr) {
+        if (typeof num === "number")
+            sum += num;
+    }
+    return sum;
+}
 
-addOnlyNums(1, 'cat', 3, 4); //8
+console.log("addOnlyNums");
+console.log(addOnlyNums(1, 'cat', 3, 4)); //8
+console.log();
 
 // Write a function called `countTheArgs` that can take any number of arguments,
 // and returns the number of arguments that are passed in.
