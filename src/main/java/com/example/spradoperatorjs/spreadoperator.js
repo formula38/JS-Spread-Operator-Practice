@@ -1,6 +1,17 @@
 // Write a function that can take in any number of arguments, and returns the sum
 // of all of the arguments.
+function sumOfNumbers(...numbers) {
+    let sum = 0;
+    for (const num of numbers) {
+        sum += num;
+    }
+    return sum;
+}
 
+console.log();
+console.log("sumOfNumbers");
+console.log(sumOfNumbers(1, 2, 3, 4));
+console.log();
 
 // Write a function called addOnlyNums that can take in any number of arguments
 // (including numbers or strings), and returns the sum of only the numbers.
@@ -11,7 +22,7 @@ addOnlyNums(1, 'cat', 3, 4); //8
 // and returns the number of arguments that are passed in.
 countTheArgs('cat', 'dog'); //2
 countTheArgs('cat', 'dog', 'frog', 'bear'); //4
-    
+
 // Write a function called combineTwoArrays that takes in two arrays as arguments,
 // and returns a single array that combines both (using the spread operator).
 
