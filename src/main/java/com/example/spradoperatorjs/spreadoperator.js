@@ -7,7 +7,6 @@ function sumOfNumbers(...numbers) {
     }
     return sum;
 }
-
 console.log();
 console.log("sumOfNumbers");
 console.log(sumOfNumbers(1, 2, 3, 4));
@@ -23,7 +22,6 @@ function addOnlyNums(...arr) {
     }
     return sum;
 }
-
 console.log("addOnlyNums");
 console.log(addOnlyNums(1, 'cat', 3, 4)); //8
 console.log();
@@ -82,7 +80,6 @@ function onlyUniques(...args) {
     }
     return uniques;
 }
-
 console.log("onlyUniques");
 console.log(onlyUniques('cat', 'cat', 'dog', 'pig')); //['cat', 'dog', 'pig']
 console.log(onlyUniques(1, 4, 7, 1, 2, 7, 4)); //[1, 4, 7, 2]
@@ -91,6 +88,18 @@ console.log();
 
 // Write a function called combineAllArrays that takes in any number of arrays as
 // arguments and combines all of them into one array.
+function combineAllArrays(...arrays) {
+    let allCombined = [...arrays];
+    return allCombined;
+}
+
+let array3 = ['cat', 'dog'];
+let array4 = ['frog', 'bear'];
+
+console.log("combineAllArrays");
+console.log(combineAllArrays(array3, array4));
+console.log(combineAllArrays(...array3, ...array4));
+console.log();
 
 
 // Write a function called squareAndSum that takes in any number of arguments,
