@@ -43,8 +43,8 @@ console.log();
 // Write a function called combineTwoArrays that takes in two arrays as arguments,
 // and returns a single array that combines both (using the spread operator).
 function combineTwoArrays(arr1, arr2) {
-    let combineArrays = [...arr1, ...arr2];
-    return combineArrays;
+    return [...arr1, ...arr2];
+
 }
 
 let array1 = ['cat', 'dog'];
@@ -89,8 +89,7 @@ console.log();
 // Write a function called combineAllArrays that takes in any number of arrays as
 // arguments and combines all of them into one array.
 function combineAllArrays(...arrays) {
-    let allCombined = [...arrays];
-    return allCombined;
+    return [...arrays];
 }
 
 let array3 = ['cat', 'dog'];
@@ -104,7 +103,17 @@ console.log();
 
 // Write a function called squareAndSum that takes in any number of arguments,
 // squares them, then sums all of the squares.
-sumAndSquare(2, 4, 3); //29
-sumAndSquare(1, 2); //5
+function sumAndSquare(...numbers) {
+    let sum = 0;
+    for (const num of numbers) {
+        let sqr = num**2;
+        sum += sqr;
+    }
+    return sum;
+}
+console.log("sumAndSquare");
+console.log(sumAndSquare(2, 4, 3)); //29
+console.log(sumAndSquare(1, 2)); //5
+console.log();
 
 
